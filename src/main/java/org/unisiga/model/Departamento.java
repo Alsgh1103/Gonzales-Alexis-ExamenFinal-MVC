@@ -19,11 +19,15 @@ public class Departamento {
     }
 
     public void asociarAcademico(Academico acad) {
-        // TODO: Asociar el académico a este departamento asegurando la bidireccionalidad segura
-        throw new UnsupportedOperationException("Método asociarAcademico() no implementado aún.");
+        if (acad == null) return;
+        if (!academicos.contains(acad)) {
+            academicos.add(acad);
+            acad.setDepartamento(this);
+        }
     }
 
     public String getCodigoDepto() { return codigoDepto; }
     public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
     public List<Academico> getAcademicos() { return academicos; }
 }

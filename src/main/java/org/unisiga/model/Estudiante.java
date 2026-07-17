@@ -23,8 +23,8 @@ public class Estudiante extends MiembroUniversitario {
 
     @Override
     public boolean login(String password) {
-        // TODO: Implementar validación simulada de clave del estudiante (largo mínimo de 8 caracteres)
-        throw new UnsupportedOperationException("Método login() no implementado aún.");
+        if (password == null) return false;
+        return password.length() >= 8;
     }
 
     /**
@@ -32,13 +32,16 @@ public class Estudiante extends MiembroUniversitario {
      * [REGLAS]: Validar que la sección no sea nula y que cuente con cupos disponibles.
      */
     public void inscribirSeccion(Seccion seccion) {
-        // TODO: Implementar la lógica del control de cupos y la creación de la clase de asociación 'Inscripcion'
-        // No olvides agregar la nueva inscripción tanto a la lista de este estudiante como a la de la sección.
-        throw new UnsupportedOperationException("Método inscribirSeccion() no implementado aún.");
+        if (seccion == null) throw new IllegalArgumentException("La sección no puede ser nula.");
+        if (seccion.getInscripciones().size() >= seccion.getCupoMaximo()) throw new IllegalStateException("La sección no tiene cupos disponibles.");
+        Inscripcion nueva = new Inscripcion(this, seccion);
+        this.inscripciones.add(nueva);
+        seccion.getInscripciones().add(nueva);
     }
 
     // Getters y Setters
     public String getMatricula() { return matricula; }
+    public int getAnioIngreso() { return anioIngreso; }
     public float getPromedioPpa() { return promedioPpa; }
     public List<Inscripcion> getInscripciones() { return inscripciones; }
 }

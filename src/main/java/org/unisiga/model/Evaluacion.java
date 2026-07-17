@@ -24,7 +24,9 @@ public class Evaluacion {
 
     public int getId() { return id; }
     public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
     public float getPonderacion() { return ponderacion; }
+    public void setPonderacion(float ponderacion) { this.ponderacion = ponderacion; }
     public Asignatura getAsignatura() { return asignatura; }
     public List<Calificacion> getCalificaciones() { return calificaciones; }
 }

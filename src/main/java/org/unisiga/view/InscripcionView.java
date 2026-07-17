@@ -140,7 +140,7 @@ public class InscripcionView extends javax.swing.JFrame {
                     .addComponent(lblFecha)
                     .addComponent(dateFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bntAgregar)
                     .addComponent(btnLimpiar))
                 .addGap(7, 7, 7))
@@ -344,7 +344,7 @@ public class InscripcionView extends javax.swing.JFrame {
     public javax.swing.JComboBox<String> cmbEstado;
     public javax.swing.JComboBox<String> cmbEstudiante;
     public javax.swing.JComboBox<String> cmbSeccion;
-    private com.toedter.calendar.JDateChooser dateFecha;
+    public com.toedter.calendar.JDateChooser dateFecha;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JPanel jPanel3;
     public javax.swing.JPanel jPanel4;

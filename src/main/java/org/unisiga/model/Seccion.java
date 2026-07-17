@@ -24,14 +24,19 @@ public class Seccion {
     }
 
     public void asignarDocente(Academico docente) {
-        // TODO: Asignar al docente de forma segura controlando la asociación bidireccional
-        throw new UnsupportedOperationException("Método asignarDocente() no implementado aún.");
+        if (docente == null) return;
+        this.docenteDicta = docente;
+        if (!docente.getSeccionesDictadas().contains(this)) {
+            docente.getSeccionesDictadas().add(this);
+        }
     }
 
     // Getters y Setters
     public char getIdGrupo() { return idGrupo; }
     public int getCupoMaximo() { return cupoMaximo; }
+    public void setCupoMaximo(int cupoMaximo) { this.cupoMaximo = cupoMaximo; }
     public String getHorario() { return horario; }
+    public void setHorario(String horario) { this.horario = horario; }
     public Asignatura getAsignatura() { return asignatura; }
     public Academico getDocenteDicta() { return docenteDicta; }
     public List<Inscripcion> getInscripciones() { return inscripciones; }

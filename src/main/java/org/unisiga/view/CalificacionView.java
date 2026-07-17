@@ -8,12 +8,12 @@ package org.unisiga.view;
  *
  * @author alex_
  */
-public class AsignaturaView extends javax.swing.JFrame {
+public class CalificacionView extends javax.swing.JFrame {
 
     /**
      * Creates new form DepartamentoView
      */
-    public AsignaturaView() {
+    public CalificacionView() {
         initComponents();
     }
 
@@ -27,22 +27,20 @@ public class AsignaturaView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        lblTitulo = new javax.swing.JLabel();
+        lblTituloPrincipal = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        lblCodigo = new javax.swing.JLabel();
-        lblNombre = new javax.swing.JLabel();
+        lblEstudiante = new javax.swing.JLabel();
+        lblEvaluacion = new javax.swing.JLabel();
         bntAgregar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
-        lblCreditos = new javax.swing.JLabel();
-        txtCodigo = new javax.swing.JTextField();
-        txtNombre = new javax.swing.JTextField();
-        txtCreditos = new javax.swing.JTextField();
-        lblPrerrequisito = new javax.swing.JLabel();
-        cmbPrerrequisito = new javax.swing.JComboBox<>();
+        lblNota = new javax.swing.JLabel();
+        cmbEstudiante = new javax.swing.JComboBox<>();
+        cmbEvaluacion = new javax.swing.JComboBox<>();
+        txtNota = new javax.swing.JTextField();
         btnVolver = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblAsignatura = new javax.swing.JTable();
+        tblEvaluacion = new javax.swing.JTable();
         btnModificar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
 
@@ -50,10 +48,10 @@ public class AsignaturaView extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(25, 103, 178));
 
-        lblTitulo.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitulo.setText("Gestión de Asignaturas ");
-        lblTitulo.setVerifyInputWhenFocusTarget(false);
+        lblTituloPrincipal.setFont(new java.awt.Font("Cambria Math", 1, 24)); // NOI18N
+        lblTituloPrincipal.setForeground(new java.awt.Color(255, 255, 255));
+        lblTituloPrincipal.setText("Registro de Calificaciones");
+        lblTituloPrincipal.setVerifyInputWhenFocusTarget(false);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -61,36 +59,35 @@ public class AsignaturaView extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(187, 187, 187)
-                .addComponent(lblTitulo)
+                .addComponent(lblTituloPrincipal)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTituloPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(15, 15, 15))
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalles de la Asignatura", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft New Tai Lue", 0, 18))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Detalles de la Evaluacion", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft New Tai Lue", 0, 18))); // NOI18N
 
-        lblCodigo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblCodigo.setText("Codigo");
+        lblEstudiante.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblEstudiante.setText("Estudiante");
 
-        lblNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblNombre.setText("Nombre");
+        lblEvaluacion.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblEvaluacion.setText("Evaluacion - nota");
 
-        bntAgregar.setText("Agregar Asignatura");
+        bntAgregar.setText("Agregar Calificación");
 
         btnLimpiar.setText("Limpiar campos");
 
-        lblCreditos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblCreditos.setText("Creditos");
+        lblNota.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblNota.setText("Nota");
 
-        lblPrerrequisito.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblPrerrequisito.setText("Prerrequisito");
+        cmbEstudiante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        cmbPrerrequisito.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbEvaluacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -99,82 +96,70 @@ public class AsignaturaView extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblEstudiante)
+                    .addComponent(lblEvaluacion)
+                    .addComponent(lblNota))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(lblPrerrequisito)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cmbPrerrequisito, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 36, Short.MAX_VALUE))
+                        .addGap(12, 12, 12)
+                        .addComponent(bntAgregar)
+                        .addGap(38, 38, 38)
+                        .addComponent(btnLimpiar)
+                        .addContainerGap(164, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblCreditos)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblCodigo)
-                                .addComponent(lblNombre)))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(49, 49, 49)
-                                .addComponent(bntAgregar)
-                                .addGap(29, 29, 29)
-                                .addComponent(btnLimpiar)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(40, 40, 40)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtCreditos, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
-                                    .addComponent(txtNombre)
-                                    .addComponent(txtCodigo))
-                                .addGap(0, 0, Short.MAX_VALUE))))))
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(cmbEvaluacion, javax.swing.GroupLayout.Alignment.LEADING, 0, 397, Short.MAX_VALUE)
+                            .addComponent(cmbEstudiante, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtNota))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCodigo)
-                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblEstudiante)
+                    .addComponent(cmbEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblEvaluacion)
+                    .addComponent(cmbEvaluacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNombre)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCreditos)
-                    .addComponent(txtCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblNota)
+                    .addComponent(txtNota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbPrerrequisito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPrerrequisito))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bntAgregar)
                     .addComponent(btnLimpiar))
-                .addGap(7, 7, 7))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         btnVolver.setText("Volver");
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Lista de Asignaturas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft New Tai Lue", 0, 18))); // NOI18N
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Lista de Evaluaciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Microsoft New Tai Lue", 0, 18))); // NOI18N
 
-        tblAsignatura.setModel(new javax.swing.table.DefaultTableModel(
+        tblEvaluacion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "✓", "Codigo", "Nombre", "Creditos", "Prerrequisito"
+                "✓", "Titulo", "Ponderacion", "Seccion"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Boolean.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblAsignatura);
+        jScrollPane1.setViewportView(tblEvaluacion);
 
         btnModificar.setText("Modificar Seleccionados");
 
@@ -223,7 +208,7 @@ public class AsignaturaView extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(41, 41, 41)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,11 +216,11 @@ public class AsignaturaView extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(40, 40, 40)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnVolver)
-                .addGap(0, 27, Short.MAX_VALUE))
+                .addGap(0, 25, Short.MAX_VALUE))
         );
 
         pack();
@@ -258,21 +243,27 @@ public class AsignaturaView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AsignaturaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalificacionView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AsignaturaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalificacionView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AsignaturaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalificacionView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AsignaturaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalificacionView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AsignaturaView().setVisible(true);
+                new CalificacionView().setVisible(true);
             }
         });
     }
@@ -283,19 +274,17 @@ public class AsignaturaView extends javax.swing.JFrame {
     public javax.swing.JButton btnLimpiar;
     public javax.swing.JButton btnModificar;
     public javax.swing.JButton btnVolver;
-    public javax.swing.JComboBox<String> cmbPrerrequisito;
+    public javax.swing.JComboBox<String> cmbEstudiante;
+    public javax.swing.JComboBox<String> cmbEvaluacion;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JPanel jPanel3;
     public javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JLabel lblCodigo;
-    public javax.swing.JLabel lblCreditos;
-    public javax.swing.JLabel lblNombre;
-    public javax.swing.JLabel lblPrerrequisito;
-    public javax.swing.JLabel lblTitulo;
-    public javax.swing.JTable tblAsignatura;
-    public javax.swing.JTextField txtCodigo;
-    public javax.swing.JTextField txtCreditos;
-    public javax.swing.JTextField txtNombre;
+    public javax.swing.JLabel lblEstudiante;
+    public javax.swing.JLabel lblEvaluacion;
+    public javax.swing.JLabel lblNota;
+    public javax.swing.JLabel lblTituloPrincipal;
+    public javax.swing.JTable tblEvaluacion;
+    public javax.swing.JTextField txtNota;
     // End of variables declaration//GEN-END:variables
 }
