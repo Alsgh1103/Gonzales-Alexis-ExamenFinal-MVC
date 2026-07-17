@@ -26,10 +26,22 @@ public class MainMenuView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnEstudiantes2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         lblBienvenida = new javax.swing.JLabel();
+        btnAcademicos = new javax.swing.JButton();
         btnEstudiantes = new javax.swing.JButton();
+        btnDepartamentos = new javax.swing.JButton();
+        btnAsignaturas = new javax.swing.JButton();
+        btnSecciones = new javax.swing.JButton();
+        btnInscripciones = new javax.swing.JButton();
+        btnCalificaciones = new javax.swing.JButton();
+        btnEvaluaciones = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+
+        btnEstudiantes2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnEstudiantes2.setText("Estudiantes");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,7 +57,7 @@ public class MainMenuView extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(131, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblTitulo)
                 .addGap(121, 121, 121))
         );
@@ -60,22 +72,64 @@ public class MainMenuView extends javax.swing.JFrame {
         lblBienvenida.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblBienvenida.setText("Bienvenida");
 
-        btnEstudiantes.setText("jButton1");
+        btnAcademicos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAcademicos.setText("Academicos");
+
+        btnEstudiantes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnEstudiantes.setText("Estudiantes");
+
+        btnDepartamentos.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnDepartamentos.setText("Departamentos");
+
+        btnAsignaturas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAsignaturas.setText("Asignaturas");
+
+        btnSecciones.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnSecciones.setText("Secciones");
+
+        btnInscripciones.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnInscripciones.setText("Inscripciones");
+
+        btnCalificaciones.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnCalificaciones.setText("Calificaciones");
+
+        btnEvaluaciones.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnEvaluaciones.setText("Evaluaciones");
+
+        btnSalir.setBackground(new java.awt.Color(255, 51, 51));
+        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
+        btnSalir.setText("SALIR");
+        btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(95, 95, 95)
                         .addComponent(lblBienvenida))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(btnEstudiantes)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(105, 105, 105)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnDepartamentos, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAcademicos, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAsignaturas, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSecciones, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnInscripciones, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCalificaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEvaluaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(178, 178, 178)
+                        .addComponent(btnSalir)))
+                .addContainerGap(133, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(105, 105, 105)
+                    .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(133, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,9 +137,28 @@ public class MainMenuView extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblBienvenida)
+                .addGap(64, 64, 64)
+                .addComponent(btnAcademicos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnDepartamentos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnAsignaturas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnSecciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnInscripciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnEvaluaciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnCalificaciones)
                 .addGap(18, 18, 18)
-                .addComponent(btnEstudiantes)
-                .addGap(0, 156, Short.MAX_VALUE))
+                .addComponent(btnSalir)
+                .addContainerGap(16, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(131, 131, 131)
+                    .addComponent(btnEstudiantes)
+                    .addContainerGap(327, Short.MAX_VALUE)))
         );
 
         pack();
@@ -127,7 +200,16 @@ public class MainMenuView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEstudiantes;
+    public javax.swing.JButton btnAcademicos;
+    public javax.swing.JButton btnAsignaturas;
+    public javax.swing.JButton btnCalificaciones;
+    public javax.swing.JButton btnDepartamentos;
+    public javax.swing.JButton btnEstudiantes;
+    private javax.swing.JButton btnEstudiantes2;
+    public javax.swing.JButton btnEvaluaciones;
+    public javax.swing.JButton btnInscripciones;
+    public javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnSecciones;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JLabel lblBienvenida;
     public javax.swing.JLabel lblTitulo;
